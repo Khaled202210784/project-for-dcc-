@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+ 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <title>Explore Matiari</title>
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+ 
+html,
+body {
+  height: 100%;
+  background-color: #ebe5dd;
+}
+ 
+/* HEADER */
+ 
+.main {
+  margin: auto;
+  max-width: 1200px;
+}
+ 
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/saudi-arabia-.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 2px 2px black;
+}
+ 
+/* NAVIGATION */
+.main-list {
+  float: right;
+  font-variant: small-caps;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+ 
+/* Responsive layout */
+@media screen and (max-width: 1000px) {
+  .main-list {
+    font-size: 17px;
+  }
+}
+ 
+@media screen and (max-width: 800px) {
+  .main-list {
+    font-size: 12px;
+  }
+}
+ 
+@media screen and (max-width: 650px) {
+  .main-list {
+    font-size: 7px;
+    font-weight: bold;
+  }
+}
+ 
+.main-list-item {
+  display: inline-block;
+}
+ 
+.main-list-item a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid transparent;
+  padding: 5px 20px;
+  transition: 0.7s ease;
+}
+ 
+.main-list-item a:hover {
+  background-color: rgb(89, 73, 46);
+}
+ 
+.active {
+  background-color: rgb(89, 73, 46);
+}
+ 
+.history-list {
+  margin-left: 40px;
+}
+ 
+.history-list a {
+  text-decoration: none;
+}
+/* TITLE */
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+ 
+.heading {
+  color: white;
+  font-size: 4vw;
+  font-variant: small-caps;
+}
+ 
+/* MAIN CONTENT */
+.page-wrapper {
+  min-height: 100%;
+}
+ 
+/* HISTORY */
+.history {
+  margin: 20px;
+}
+ 
+.history-para {
+  padding: 13px;
+}
+ 
+.history-heading2 {
+  margin: 2px;
+  padding-top: 20px;
+}
+ 
+/* IMAGE GALLERY */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+ 
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 20%;
+  max-width: 20%;
+  padding: 0 4px;
+}
+ 
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+ 
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+ 
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+ 
+/* FAMOUS PLACES PAGE */
+/* IMAGE GALLERY */
+.image-gallery {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+ 
+.gallery {
+  border: 1px solid #ccc;
+}
+ 
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+ 
+.des {
+  padding: 15px;
+  text-align: center;
+}
+ 
+.responsive {
+  margin-top: 10px;
+  padding: 0 7px;
+  width: 290px;
+}
+ 
+/* Restaurants Page */
+.restaurants {
+  padding: 10px;
+}
+ 
+.restaurants-link {
+  color: #6e0101;
+}
+ 
+/* STOPS Page*/
+.stops-link {
+  color: blue;
+}
+ 
+/* Hospitals Page */
+ 
+.hospitals-link {
+  color: green;
+}
+ 
+/* FOOTER */
+.footer {
+  background: #303036;
+  color: #d3d3d3;
+  height: 400px;
+  position: relative;
+}
+ 
+.footer .footer-bottom {
+  background-color: #343a40;
+  color: #686868;
+  text-align: center;
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding-top: 20px;
+}
+ 
+.footer .footer-content {
+  height: 350px;
+  display: flex;
+}
+ 
+.footer .footer-content .footer-section {
+  flex: 1;
+  padding: 25px;
+}
+ 
+.footer .footer-content h1 {
+  color: white;
+}
+ 
+.footer-para {
+  margin: 10px 0;
+}
+ 
+.footer .footer-content .about .contact span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+ 
+.footer .footer-content .about .socials a {
+  border: 1px solid gray;
+  width: 45px;
+  height: 38px;
+  padding-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: #d3d3d3;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+ 
+.footer .footer-content .about .socials a:hover {
+  color: white;
+  border: 1px solid white;
+  transition: all 0.3s;
+}
+ 
+.footer-section {
+  text-align: center;
+}
+ 
+.logo-text {
+  font-variant: initial;
+}
+ 
+.logo-text .logo-span {
+  color: #a2c376;
+}
+ 
+</style>
+ 
+<body>
+    <!-- Header and Nav -->
+    <header>
+        <nav>
+            <div class="main">
+ 
+                <ul class="main-list">
+                    <li class="active main-list-item"><a href="index.html">Home</a></li>
+                    <li class="main-list-item"><a href="famousplaces.html">Famous Places</a></li>
+                    <li class="main-list-item"><a href="restaurants.html">Restaurants</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- // Header and Nav -->
+ 
+        <!-- Title heading -->
+        <div class="title">
+            <span class="heading">Welcome To Saudi Arabia</span>
+           
+        </div>
+    </header>
+    <!-- // Title heading -->
+ 
+    <!-- History section -->
+    <div class="page-wrapper">
+        <main>
+            <section>
+                <div class="page-wrapper">
+                    <div class="history">
+                        <h1 class="history-heading1">History of Saudi Arabia</h1>
+                        <span class="history-caption">"The history of Saudi Arabia as a nation-state began in 1727 with the emergence of the Al Saud dynasty and the
+                        establishment of the Emirate of Diriyah. The region, constituting modern Saudi Arabia, has a rich pre-Islamic history,
+                        showing some of the earliest traces of human activity." </span>
+                     
+ 
+                        <!-- Etymology -->
+                        <h3 class="history-heading2">Etymology</h3>
+                        <p class="history-para">
+                        The word "Saudi" is derived from the element as-Suʿūdīyya in the Arabic name of the country, which is a type of
+                        adjective known as a nisba, formed from the dynastic name of the Saudi royal family, the Al Saud
+                        </p>
+                        <!-- // Etymology -->
+                        <!-- Demography -->
+                        <h3 class="history-heading2">Demography</h3>
+                        <p class="history-para">
+                        Saudi Arabia is the fourth largest state in the Arab world, with a reported population of 32,175,224 as of 2022.[6][7]
+                        41.6% of inhabitants are immigrants.[8] Saudi Arabia has experienced a population explosion in the last 40 years,[9] and
+                        continues to grow at a rate of 1.62% per year.[8].
+                        </p>
+                        <!-- // Demography -->
+                        <!-- History and Administration -->
+                        <h3 class="history-heading2">Administration of Saudi Arabia</h3>
+                        <p class="history-para">
+                            Saudi Arabia is an absolute monarchy. According to the Basic Law of Saudi Arabia, the country's de facto constitution
+                            adopted by royal decree in 1992, the king must comply with Sharia (that is, Islamic law) and the Qur'an.
+ 
+                        <ul class="history-list">
+                            <li> <a href="https://en.wikipedia.org/wiki/History_of_Saudi_Arabia" target="_blank"> History</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Ibn_Saud" target="_blank"> Ibn Saud</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Culture_of_Saudi_Arabia" target="_blank"> Said Arabia Culter</a>
+                            </li>
+                        </ul>
+ 
+                        </p>
+                        <!-- // History and Administration -->
+                        <!-- Agriculture -->
+                        <h3 class="history-heading2">Agriculture</h3>
+                        <p class="history-para">Among its most productive crops are watermelon, grapes, citrus fruits, onions, squash, and tomatoes. At Jizan in the
+                        country's well-watered southwest, the Al-Hikmah Research Station is producing tropical fruits including pineapples,
+                        paw-paws, bananas, mangoes, and
+                        </p>
+                        <!-- // Agriculture -->
+                        <!-- Holy Mosques -->
+                        <h3 class="history-heading2">Holy Mosques</h3>
+                        <p class="history-para">Saudi Arabia is sometimes called "the Land of the Two Holy Mosques", in reference to Al-Masjid al-Haram (in Mecca) and
+                        Al-Masjid an-Nabawi (in Medina), the two holiest places in Islam. Petroleum was discovered on 3 March 1938 and followed
+                        up by several other finds in the Eastern Province..
+                        </p>
+ 
+                        <!-- Image Gallery -->
+                        <div class="row">
+                            <div class="column">
+                                <img src="C:\Users\azzii\Downloads\SR-images\images\الكعبة.jpg">
+                            </div>
+ 
+                            <div class="column">
+                                <img src="C:\Users\azzii\Downloads\SR-images\images\المسجد النبوي.png">
+                            </div>
+                        </div>
+ 
+ 
+                        <!-- // Famous Things -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- // History section -->
+ 
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h1 class="logo-text">
+                        <span class="logo-span">A</span>bdulaziz
+                        <span class="logo-span">K</span>haled
+                    </h1>
+                    <p class="footer-para">
+                        We, KFUPM DCC creative students, proudly excel in web courses, mastering skills to shape the digital landscape with
+                        innovation.
+                    </p>
+                        <!--Git hub-->
+                        <a href="" target="_blank"><i class=""></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; | Designed By Abdulaziz and khaled
+            </div>
+        </div>
+    </footer>
+    <!-- // Footer -->
+</body>
+ 
+</html>
